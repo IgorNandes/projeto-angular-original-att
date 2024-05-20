@@ -1,0 +1,63 @@
+<!--<article>
+    <h3>Testes data-binding</h3>
+<div>
+  
+  Selecione uma classe:
+  <select #drop (change)="0">
+    <option value="alert-sucess">Sucesso</option>
+    <option value="alert-danger">Errado</option>
+  </select>
+
+<br><br>
+
+<div class="alert" role="alert" 
+[class.alert-info]="drop.value =='alert-sucess'">
+    <strong>Errado porem certo</strong> 
+</div>
+
+<div class="alert" role="alert" 
+[class.alert-danger]="drop.value =='alert-danger'">
+    <strong>Errado porem certo</strong> 
+</div>
+
+<div class="alert alert-danger" role="alert"
+[style.display]="drop.value == 'alert-danger' ? 'block'  : 'none'">
+  <strong>Achou!</strong>
+</div>
+
+</div>
+</article>
+-->
+<!--<article>
+
+  <h3>Event Bind</h3>
+
+  <br>
+
+  <div>
+    <button (click)="botaoClicar()"
+    class="btn btn-primary">
+      Me clique
+    </button>
+
+    <br><br>
+
+    <input type="text" (keyup)="onKeyUp($event)">
+  </div>
+
+</article>
+-->
+<article>
+  <h3>two way Bind</h3>
+
+  <br>
+
+  <div>
+
+    <input type="text" [(ngModel)]="nome">
+
+    <p> O valor digitado é: {{ nome }}</p>
+    
+  </div>
+
+</article>

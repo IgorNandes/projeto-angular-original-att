@@ -1,0 +1,21 @@
+<h5>Pipes</h5>
+
+<p>Nome: {{ time.nome | camelCase }}</p>
+<p>Data: {{ time.data | date:'dd/MMM/yyyy'  }}</p>
+<p>Cidade: {{ time.cidade| uppercase }}</p>
+
+<input type="text" [(ngModel)]="caixaFiltro">
+
+<h3>Utilizando pipes</h3>
+<ul>
+    <li *ngFor="let tim of times | filtro:caixaFiltro">
+        {{ tim }}
+    </li>
+</ul>
+
+<h3>Utilizando a forma correta</h3>
+<ul>
+    <li *ngFor="let tim of FiltroCorreto()">
+        {{ tim }}
+    </li>
+</ul>
